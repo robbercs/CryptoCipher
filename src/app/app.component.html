@@ -6,6 +6,38 @@
   <title>Document</title>
 </head>
 <body>
-  <app-sidebar></app-sidebar>
+  <div class="principal">
+    <div class="typ">
+      <h1><#> CryptoCipher</h1>
+    </div>
+    <div class="info">
+      <p>Trabajo de Fin de Grado: Fundamentos Matemáticos de la Criptografía en Clave Pública</p>
+      <p>Autor: Roberto Calderón Sequera</p>
+      <p>Tutor: Alfonso Zamora Saiz</p>
+      <p>Departamento de Matemática Aplicada a las TIC</p>
+      <a href="#">Más información</a>
+    </div>
+  </div>
+  
+  <div class="blank"></div>
+  
+  <div class="principal second">
+    <div class="item" routerLink="/historia">
+      <h3>Historia</h3>
+    </div>
+    <div class="item" routerLink="/rsa">
+      <h3>RSA</h3>
+    </div>
+    <div class="item">
+      <h3>Diffie-Hellmann</h3>
+    </div>
+  </div>
+  
+  <div class="blank"></div>
+
+  <div class="modulos">
+    <router-outlet></router-outlet>
+  </div>
+  
 </body>
 </html>

@@ -53,4 +53,5 @@
     color: white !important;
     background: rgba(43, 48, 58, 0.50);
     transform: scale(1.1);
+    cursor: pointer;
   }
