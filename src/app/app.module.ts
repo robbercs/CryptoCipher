@@ -8,14 +8,15 @@ import { CaesarComponent } from './caesar/caesar.component';
 import { RsaComponent } from './rsa/rsa.component';
 import { DiffieHellmanComponent } from './diffie-hellman/diffie-hellman.component';
 import { RouterModule, Routes } from '@angular/router';
+import { PrincipalPageComponent } from './principal-page/principal-page.component';
 
 
 const appRoute: Routes = [
-  {path: '', component: AppComponent },
+  {path: '', component: PrincipalPageComponent },
   {path: 'historia', component: HistoryComponent },
   {path: 'caesar', component: CaesarComponent },
-  {path: 'rsa', component: RsaComponent },
-  {path: 'diffie', component: DiffieHellmanComponent }
+  {path: 'diffie', component: DiffieHellmanComponent },
+  {path: 'rsa', component: RsaComponent }
 ]
 
 @NgModule({
@@ -25,7 +26,8 @@ const appRoute: Routes = [
     HistoryComponent,
     CaesarComponent,
     RsaComponent,
-    DiffieHellmanComponent
+    DiffieHellmanComponent,
+    PrincipalPageComponent
   ],
   imports: [
     BrowserModule,
