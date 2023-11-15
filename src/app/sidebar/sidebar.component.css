@@ -7,7 +7,9 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-left: 3%
+  /* margin-left: 3%; */
+  margin:0;
+  background-color: #343A40;
 }
 .hamburguesa {
   display: none
@@ -17,7 +19,7 @@ h1 {
   color: #f8f9fa;
   font-weight: 700;
   font-family: Teko,sans-serif;
-  font-size: 3vw
+  font-size: 3vw;
 }
 a {
   text-decoration: none;

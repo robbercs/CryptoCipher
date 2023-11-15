@@ -33,7 +33,9 @@ const appRoute: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoute)
+    RouterModule.forRoot(appRoute,{
+      scrollPositionRestoration: 'enabled'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

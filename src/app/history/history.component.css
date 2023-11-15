@@ -1,0 +1,118 @@
+@import url(https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@800&family=Teko&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Overpass:wght@200&family=Source+Sans+3:wght@800&family=Teko&display=swap);
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-top: 10%;
+    z-index: 1;
+    margin-bottom: 100px;
+}
+
+.rectangles {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.rectangle {
+    height: 350px;
+    /* Altura de los rectángulos */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.left {
+    margin-right: 10%;
+
+}
+
+.right {
+    background-color: blue;
+    margin-left: 10%;
+
+}
+
+.one {
+    background: linear-gradient(270deg, rgba(96, 78, 40, 1) 0%, rgba(168, 141, 96, 0.8064017843465512) 49%, rgba(168, 141, 96, 0.11172391319809172) 86%), url(src\images\KhnoumhotepII.jpg);
+    background-position: 80% 20%;
+}
+
+.two {
+
+    background: linear-gradient(90deg, rgba(39, 136, 239, 1) 0%, rgba(43, 130, 222, 1) 46%, rgba(46, 124, 205, 0) 100%), url(src\images\cesar.jpg);
+    background-position: 20% 0%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.three {
+    background: linear-gradient(90deg, rgba(255, 253, 246, 0.04169590199360995) 0%, rgba(197, 185, 171, 0.5038807759431898) 30%, rgba(144, 122, 101, 1) 55%), url(src\images\Vigenere.jpeg);
+
+
+}
+
+.four {
+    background: linear-gradient(270deg, rgba(240, 240, 240, 0) 0%, rgba(192, 192, 192, 0.4058415602569153) 11%, rgba(152, 152, 152, 1) 61%), url(src\images\enigma.jpg);
+    background-position: 30% 25%;
+
+}
+
+h3 {
+    /* width: 20%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 50%;
+    flex: 1;
+    font-size: 6vw;
+    text-align: center;
+    font-family: Teko, sans-serif;
+    background-color: #E9ECEF;
+    color: #212529;
+    border-radius: 100%;
+    padding: 1%;
+    margin:1%;
+}
+
+h1 {
+    font-family: Teko, sans-serif;
+    font-size: 5vw;
+
+
+}
+
+h2 {
+    font-family: Oswald, sans-serif;
+    font-size: 1.3vw;
+
+}
+
+.rectangle-column {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 5%;
+}
+
+.right .rectangle-column {
+    align-items: flex-start;
+}
+
+.infoInicial{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 5%;
+    color: white;
+    font-size: 1.5vw;
+    font-family: Oswald, sans-serif;
+    text-align: center;
+    
+}
