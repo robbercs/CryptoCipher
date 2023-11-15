@@ -12,5 +12,15 @@ export class SidebarComponent {
     this.optionSelected.emit(option);
     console.log(option);
   }
+
+  public menuVisible = false;
+
+  toggleMenu(){
+    this.menuVisible = !this.menuVisible;
+    console.log(this.menuVisible);
+  }
+  getWindowWidth() {
+    return window.innerWidth;
+  }
 }
 

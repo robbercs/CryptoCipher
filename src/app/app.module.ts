@@ -9,6 +9,7 @@ import { RsaComponent } from './rsa/rsa.component';
 import { DiffieHellmanComponent } from './diffie-hellman/diffie-hellman.component';
 import { RouterModule, Routes } from '@angular/router';
 import { PrincipalPageComponent } from './principal-page/principal-page.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 const appRoute: Routes = [
@@ -27,7 +28,8 @@ const appRoute: Routes = [
     CaesarComponent,
     RsaComponent,
     DiffieHellmanComponent,
-    PrincipalPageComponent
+    PrincipalPageComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,23 @@
 <nav>
-    <a routerLink="">Página Principal</a>
-    <a routerLink="/diffie">Diffie-Hellmann</a>
-    <a routerLink="/caesar">Caesar</a>
-    <a routerLink="/rsa">RSA</a>
-  </nav>
+  <div class="hamburguesa">
+    <label class="container" id="menuToggle">
+      <input type="checkbox" id="menuCheckbox" (click)="toggleMenu()">
+      <div class="checkmark">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </label>
+    <a routerLink=""><h1><#> CryptoCipher</h1></a><br>
+  </div>
+  <a routerLink="" class="titulo"><h1><#> CryptoCipher</h1></a><br>
+  <div class="navigation" *ngIf="menuVisible || getWindowWidth() >= 883">
+    <div class="li"><a data-hover="History" routerLink="/historia">Historia</a></div>
+    <div class="li"><a data-hover="Cifrado César" routerLink="/caesar">Cifrado César</a></div>
+    <div class="li"><a data-hover="Elgamal" routerLink="/diffie">Elgamal</a></div>
+    <div class="li"><a data-hover="Baby-Step Giant-Step" routerLink="/diffie">Baby-Step Giant-Step</a></div>
+    <div class="li"><a data-hover="Pholing-Hellman" routerLink="/rsa">Pohling-Hellman</a></div>
+    <div class="li"><a data-hover="Miller" routerLink="/rsa">Miller</a></div>
+    <div class="li"><a data-hover="RSA" routerLink="/rsa">RSA</a></div>
+  </div>
+</nav>
