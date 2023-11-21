@@ -1,2 +1,30 @@
 <app-sidebar></app-sidebar>
-<p>caesar works!</p>
+<div class="main-container">
+  <div class="info">
+    <h1>Cifrado César</h1>
+    <p>El cifrado César es un método de cifrado de sustitución en el cual cada letra en el texto original es desplazada por un número fijo de posiciones en el alfabeto. Este desplazamiento se conoce como "clave" y determina la transformación de las letras. Aunque es una de las técnicas más simples de cifrado, el cifrado César ilustra el principio fundamental de la criptografía: la transformación de datos para proteger su confidencialidad. Sin embargo, debido a su simplicidad, el cifrado César es vulnerable a ataques de fuerza bruta y no se considera seguro para la protección de datos sensibles en aplicaciones modernas.</p>
+  </div>
+  <div class="input-container">
+    <p>Texto en Claro</p>
+    <input type="text" name="inputText" class="input" placeholder="Write a message" id="inputText"
+  [ngModel]="inputText" (ngModelChange)="inputText = $event.toUpperCase(); updateCipher()">
+
+    </div>
+  <div class="rows">
+    <div class="row1">
+      <div class="letter" *ngFor="let letter of row1">{{ letter }}</div>
+    </div>
+    <div class="controls">
+      <button role="button" class="button-name" (click)="moveRow('left')"><-</button>
+      <button role="button" class="button-name" (click)="moveRow('right')">-></button>
+    </div>
+    <div class="row2">
+      <div class="letter" *ngFor="let letter of row2">{{ letter }}</div>
+    </div>
+  </div>
+  <div class="input-container">
+    <p>Texto Cifrado</p>
+    <input type="text" name="outputText" class="input" placeholder="Write a message" id="outputText" [(ngModel)]="outputText" (ngModelChange)="outputText = $event.toUpperCase(); updatePlainText()">
+  </div>
+</div>
+<app-footer></app-footer>

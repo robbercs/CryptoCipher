@@ -1,159 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@800&family=Teko&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@200&family=Source+Sans+3:wght@800&family=Teko&display=swap');
-
-
-/* :root{
---color: #333; 
-}
-
-body {
-  font-family: 'Red Hat Text', sans-serif;
-  overflow-x: hidden;
-}
-
-.principal {
-  text-align: center;
-  color: black;
-  width: 100%;
-  min-height: 100vh;
-  max-width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #F8F9FA;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-.info{
-  margin-top: 20vh;
-  padding: 10px;
-  background-color: #343A40;
-  color: white;
-  border-radius: 4px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-h1 {
-  font-weight: 700;
-  font-size: 6vw;
-  color: #343A40;
-  font-family: 'Teko', sans-serif;
-}
-
-p {
-  max-width: 52ch;
-  line-height: 1.5;
-  font-family: 'Overpass', sans-serif;
-}
-
-a {
-  display: inline-block;
-  padding: 1em 3.5em;
-  background-color: var(--color);
-  color: white;
-  text-decoration: none;
-  text-transform: uppercase;
-  border-radius: 0.3em;
-  font-weight: 700;
-  letter-spacing: .5px;
-  font-size: .875rem;
-}
-.typ{
-  width: 55ch;
-  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid;
-  line-height: 0.8em;
-  font-family: monospace;
-  font-size: 2em;
-  color: #343A40;
-}
-
-@keyframes typing {
-  from {
-    width: 0
-  }
-}
-    
-@keyframes blink {
-  50% {
-    border-color: transparent
-  }
-}
-
-
-
-.blank,
-.other {
-  width: 100%;
-  min-height: 60vh;
-  background-color: var(--color);
-}
-
-.second {
-  background-image:url(src\images\fondo6.jpg);
-  background-attachment: fixed;
-  height: 800px;
-}
-
-.img {
-  width: 90%;
-  height: 200px;
-  background-color: lightgrey;
-  background-size: cover;
-  background-position: center;
-  margin-top: 20px;
-  border-radius: .3em;;
-}
-
-.second {
-  flex-direction: row;
-  gap: 1.6em;
-}
-
-h3 {
-  font-family: 'Teko', sans-serif;
-  font-weight: 700;
-  font-size: 3rem;
-  margin-top: 1em;
-}
-
-.item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 320px;
-  min-width: 200px;
-  min-height: 300px;
-  background-color: #DEE2E6;
-  flex-direction: column;
-  align-items: center;
-  border-radius: .5em;
-  -webkit-box-shadow: 0px 29px 38px -15px rgba(0,0,0,0.43);
-  -moz-box-shadow: 0px 29px 38px -15px rgba(0,0,0,0.43);
-  box-shadow: 0px 29px 38px -15px rgba(0,0,0,0.43);
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.item:hover {
-  background-color: #212529;
-  color: #DEE2E6 !important;
-  transform: scale(1.05); /* agranda el elemento al pasar el mouse sobre él */
-
-.main{
+@import url(https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@800&family=Teko&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Overpass:wght@200&family=Source+Sans+3:wght@800&family=Teko&display=swap);
+.main {
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
   max-width: 100vw;
-  font-family: 'Red Hat Text', sans-serif;
-  overflow-x: hidden;
+  font-family: 'Red Hat Text',sans-serif;
+  overflow-x: hidden
 }
-.principal{
+.principal {
   width: 100%;
   max-width: 100vw;
   height: 100vh;
@@ -161,37 +17,34 @@ h3 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #F8F9FA;
+  background-color: #f8f9fa;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: fixed
 }
-
-.blank{
+.blank {
   width: 100%;
   min-height: 40vh;
-  background-color: #343A40;
+  background-color: #343a40
 }
-
-h1{
+h1 {
   font-weight: 700;
-  color: #343A40;
-  font-family: 'Teko', sans-serif;
-  font-size: 7vw;
+  color: #343a40;
+  font-family: Teko,sans-serif;
+  font-size: 7vw
 }
-.typ{
+.typ {
   width: 38vw;
-  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  animation: typing 2s steps(22),blink .5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
-  line-height: 0.7em;
+  line-height: .7em;
   font-family: monospace;
   font-size: 2em;
-  color: #343A40;
+  color: #343a40
 }
-
-.info{
+.info {
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -199,37 +52,32 @@ h1{
   margin-top: 15vh;
   text-align: center;
   padding: 15px;
-  background-color: #343A40;
-  color: white;
+  background-color: #343a40;
+  color: #fff;
   border-radius: 4px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  min-width: 40%;
+  box-shadow: rgba(0,0,0,.24) 0 3px 8px;
+  min-width: 40%
 }
-
-a{
-  color: white;
+a {
+  color: #fff;
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 0.3em;
   font-weight: 700;
-  margin-top: 5%;
+  margin-top: 5%
 }
-
-
 @keyframes typing {
   from {
     width: 0
   }
 }
-    
 @keyframes blink {
   50% {
     border-color: transparent
   }
 }
-
 .second {
-  background-image:url(src\images\fondo6.jpg);
+  background-image: url(src\images\fondo6.jpg);
   background-attachment: fixed;
   min-height: 100vh;
   display: flex;
@@ -237,7 +85,6 @@ a{
   align-items: flex-start;
   justify-content: space-around;
 }
-
 .item {
   display: flex;
   justify-content: center;
@@ -245,53 +92,49 @@ a{
   width: 60%;
   max-width: 18vw;
   height: 55%;
-  background-color: #DEE2E6;
+  background-color: #dee2e6;
   flex-direction: column;
   margin-top: 5%;
   border-radius: .5em;
-  -webkit-box-shadow: 0px 29px 38px -15px rgba(0,0,0,0.43);
-  -moz-box-shadow: 0px 29px 38px -15px rgba(0,0,0,0.43);
-  box-shadow: 0px 29px 38px -15px rgba(0,0,0,0.43);
-  transition: all 0.3s ease;
-  cursor: pointer;
+  -webkit-box-shadow: 0 29px 38px -15px rgba(0,0,0,.43);
+  -moz-box-shadow: 0 29px 38px -15px rgba(0,0,0,.43);
+  box-shadow: 0 29px 38px -15px rgba(0,0,0,.43);
+  transition: all .3s ease;
+  cursor: pointer
 }
 .item:hover {
   background-color: #212529;
-  color: #DEE2E6 !important;
-  transform: scale(1.05); /* agranda el elemento al pasar el mouse sobre él */
+  color: #dee2e6!important;
+  transform: scale(1.05)
 }
-
-h3{
-  font-family: 'Teko', sans-serif;
+h3 {
+  font-family: Teko,sans-serif;
   font-weight: 700;
   font-size: 2.5rem;
   margin-top: 1em;
-  text-align: center;
-
+  text-align: center
 }
-
-@media screen and (max-width: 675px){
-
-  h1{
-    font-size: 12vw;
+@media screen and (max-width:675px) {
+  h1 {
+    font-size: 12vw
   }
-  .typ{
-    width: 65vw;
+  .typ {
+    width: 65vw
   }
-  .info{
-    max-width: 80%;
+  .info {
+    max-width: 80%
   }
-  .blank{
-    min-height: 20vh;
+  .blank {
+    min-height: 20vh
   }
-  .second{
+  .second {
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: flex-start
   }
-  .item{
+  .item {
     min-width: 80vw;
     max-height: 15vh;
-    margin-top: 5%;
+    margin-top: 5%
   }
 }

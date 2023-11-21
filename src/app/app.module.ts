@@ -10,13 +10,21 @@ import { DiffieHellmanComponent } from './diffie-hellman/diffie-hellman.componen
 import { RouterModule, Routes } from '@angular/router';
 import { PrincipalPageComponent } from './principal-page/principal-page.component';
 import { FooterComponent } from './footer/footer.component';
-
+import { ElgamalComponent } from './elgamal/elgamal.component';
+import { BabyGiantComponent } from './baby-giant/baby-giant.component';
+import { PohligComponent } from './pohlig/pohlig.component';
+import { MillerComponent } from './miller/miller.component';
+import { FormsModule } from '@angular/forms'; 
+import { ReactiveFormsModule } from '@angular/forms';
 
 const appRoute: Routes = [
   {path: '', component: PrincipalPageComponent },
   {path: 'historia', component: HistoryComponent },
   {path: 'caesar', component: CaesarComponent },
-  {path: 'diffie', component: DiffieHellmanComponent },
+  {path: 'elgamal', component: ElgamalComponent },
+  {path: 'babyGiant', component: BabyGiantComponent },
+  {path: 'pohlig', component: PohligComponent },
+  {path: 'miller', component: MillerComponent },
   {path: 'rsa', component: RsaComponent }
 ]
 
@@ -29,13 +37,19 @@ const appRoute: Routes = [
     RsaComponent,
     DiffieHellmanComponent,
     PrincipalPageComponent,
-    FooterComponent
+    FooterComponent,
+    ElgamalComponent,
+    BabyGiantComponent,
+    PohligComponent,
+    MillerComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoute,{
       scrollPositionRestoration: 'enabled'
-    })
+    }),
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
