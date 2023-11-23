@@ -77,7 +77,9 @@ a {
   }
 }
 .second {
-  background-image: url(src\images\fondo6.jpg);
+  background-color: #dee2e6;
+  background-image: url(src\images\fondo7.jpg);
+  background-size: 120%;
   background-attachment: fixed;
   min-height: 100vh;
   display: flex;
@@ -92,7 +94,8 @@ a {
   width: 60%;
   max-width: 18vw;
   height: 55%;
-  background-color: #dee2e6;
+  background-color: #212529;
+  color: #dee2e6;
   flex-direction: column;
   margin-top: 5%;
   border-radius: .5em;
@@ -103,8 +106,8 @@ a {
   cursor: pointer
 }
 .item:hover {
-  background-color: #212529;
-  color: #dee2e6!important;
+  background-color: #dee2e6;
+  color: #212529!important;
   transform: scale(1.05)
 }
 h3 {
