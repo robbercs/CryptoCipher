@@ -90,8 +90,8 @@
           </div>
         </div>
       </div>
-      
-      
+
+
 
 
     </div>
@@ -112,10 +112,11 @@
     <div class="paso" *ngIf="pasoActual ===4">
       <div class="info">
         <h1>Creación de clave privada</h1>
-        <p>Alice escoge su clave privada 0 < a < p-1 y calcula su clave pública con ella A = g^a (mod p) </p>
-        <p>Introduce el número a:</p>
+        <p>Alice escoge su clave privada 0 < a < p-1 y calcula su clave pública con ella A=g^a (mod p) </p>
+            <p>Introduce el número a:</p>
       </div>
-      <input type="number" class="inputType" id="clavePrivada" [class.invalid]="!clavePrivadaValida" [(ngModel)]="a" min="1" [max]="p - 1" (ngModelChange)="actualizarA()"/>
+      <input type="number" class="inputType" id="clavePrivada" [class.invalid]="!clavePrivadaValida" [(ngModel)]="a"
+        min="1" [max]="p - 1" (ngModelChange)="actualizarA()" />
       <p *ngIf="!clavePrivadaValida" class="mensaje-error">Ingrese una clave privada válida entre 1 y {{ p - 1 }}</p>
       <p *ngIf="clavePrivadaValida" class="resultado">El valor de la clave pública A = g^a (mod p) es:</p>
       <p *ngIf="clavePrivadaValida" class="resultado">{{A}}</p>
@@ -125,28 +126,30 @@
       <div class="info">
         <h1>Elección del mensaje y encriptación</h1>
         <p>Bob escoge su texto en claro m y un elemento aleatorio 0 < k < p</p>
-        <p>Bob usa la clave pública de Alice A para calcular y enviar c1 = g^k mod p y c2 = mA^k mod p</p>
+            <p>Bob usa la clave pública de Alice A para calcular y enviar c1 = g^k mod p y c2 = mA^k mod p</p>
       </div>
-      
+
       <div class="inputs">
         <p>Introduce el mensaje</p>
         <p>Introduce el elemento aleatorio</p>
       </div>
       <div class="inputs">
-        <input type="number" id="mensaje" class="inputType" [class.invalid]="!mensajeValidado" [(ngModel)]="m" min="1" [max]="p - 1" (ngModelChange)="actualizarM()"/>
-        <input type="number" id="aleatorio" class="inputType" [class.invalid]="!aleatorioValidado" [(ngModel)]="k" min="1" [max]="p - 1" (ngModelChange)="actualizarK()"/>
+        <input type="number" id="mensaje" class="inputType" [class.invalid]="!mensajeValidado" [(ngModel)]="m" min="1"
+          [max]="p - 1" (ngModelChange)="actualizarM()" />
+        <input type="number" id="aleatorio" class="inputType" [class.invalid]="!aleatorioValidado" [(ngModel)]="k"
+          min="1" [max]="p - 1" (ngModelChange)="actualizarK()" />
       </div>
       <div class="inputs">
         <p *ngIf="!mensajeValidado" class="mensaje-error">Ingrese un mensaje válida entre 1 y {{ p - 1 }}</p>
         <p *ngIf="!aleatorioValidado" class="mensaje-error">Ingrese un aletorio válido entre 1 y {{ p - 1 }}</p>
       </div>
-      
+
       <div class="inputs" *ngIf="mensajeValidado && aleatorioValidado">
         <p style="font-size: 2vw;"> C1 : {{c1}}</p>
         <p style="font-size: 2vw;"> C2 : {{c2}}</p>
       </div>
-    
-    
+
+
     </div>
     <div class="paso" *ngIf="pasoActual ===6">
       <div class="info">
@@ -158,14 +161,12 @@
       </div>
       <p>La desencriptación del mensaje se da por la fórmula: (c1^a)^-1 * c2 mod p = m</p>
       <p>m = (c1^a)^-1 * c2 mod p = {{d}}</p>
-
-
-    
-    
     </div>
     <div class="botones">
-      <button *ngIf="pasoActual > 1" (click)="retrocederAlPasoAnterior()">Retroceder a {{ nombresPasos[pasoActual - 2] }}</button>
-      <button *ngIf="pasoActual < 6" (click)="avanzarAlSiguientePaso()">Avanzar a {{ nombresPasos[pasoActual] }}</button>
+      <button *ngIf="pasoActual > 1" (click)="retrocederAlPasoAnterior()">Retroceder a {{ nombresPasos[pasoActual - 2]
+        }}</button>
+      <button *ngIf="pasoActual < 6" (click)="avanzarAlSiguientePaso()">Avanzar a {{ nombresPasos[pasoActual]
+        }}</button>
     </div>
   </div>
 </div>

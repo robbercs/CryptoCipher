@@ -42,7 +42,7 @@ export class ElgamalComponent {
   ];
 
   nombresPasos: string[] = [
-    'Introducción',   
+    'Introducción',
     'Elegir p',
     'Elegir g',
     'Creación de clave pública',
@@ -66,9 +66,9 @@ export class ElgamalComponent {
 
   avanzarAlSiguientePaso() {
     console.log(this.pasoActual);
-    if (this.pasoActual === 1){
+    if (this.pasoActual === 1) {
       this.pasoActual++;
-    }else if (this.pasoActual === 2 && this.p !== 0) {
+    } else if (this.pasoActual === 2 && this.p !== 0) {
       this.pasoActual++;
     } else if (this.pasoActual === 3 && this.g !== 0) {
       this.pasoActual++;
@@ -81,14 +81,14 @@ export class ElgamalComponent {
     }
     this.scrollToTop();
   }
-  
+
   retrocederAlPasoAnterior() {
     if (this.pasoActual > 1) {
       this.pasoActual--;
     }
     this.scrollToTop();
   }
-  
+
 
   seleccionarPrimo(p: number) {
     this.p = p;
@@ -156,7 +156,7 @@ export class ElgamalComponent {
       const resultadoEncriptacion = this.encriptarMensaje(this.m, this.A, this.p, this.g);
       this.c1 = resultadoEncriptacion.c1;
       this.c2 = resultadoEncriptacion.c2;
-      this.d = this.desencriptarMensaje(this.c1,this.c2,this.a,this.p);
+      this.d = this.desencriptarMensaje(this.c1, this.c2, this.a, this.p);
     } else {
       this.mensajeValidado = false;
     }
@@ -167,7 +167,7 @@ export class ElgamalComponent {
       const resultadoEncriptacion = this.encriptarMensaje(this.m, this.A, this.p, this.g);
       this.c1 = resultadoEncriptacion.c1;
       this.c2 = resultadoEncriptacion.c2;
-      this.d = this.desencriptarMensaje(this.c1,this.c2,this.a,this.p);
+      this.d = this.desencriptarMensaje(this.c1, this.c2, this.a, this.p);
     } else {
       this.aleatorioValidado = false;
     }

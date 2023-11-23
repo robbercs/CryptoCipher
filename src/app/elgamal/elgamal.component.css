@@ -207,33 +207,38 @@ h2 {
   font-size: 1.7vw;
 }
 
-.numero-primo:hover{
+.numero-primo:hover {
   background-color: #998fc7;
   border: 1px solid #998fc7;
 }
 
 
-.inputType{
+.inputType {
   width: 60%;
   padding: 8px;
   margin-bottom: 2%;
-  border: 1px solid #ccc; /* Gris claro */
+  border: 1px solid #ccc;
+  /* Gris claro */
   border-radius: 3px;
   font-family: 'Teko', sans-serif;
-  font-size: 1.5vw; /* Ajusta el tamaño según tus necesidades */
+  font-size: 1.5vw;
+  /* Ajusta el tamaño según tus necesidades */
   background-color: #343a40;
-  color: #fff; /* Blanco */
+  color: #fff;
+  /* Blanco */
 }
 
 .inputType.invalid {
-  border: 2px solid red; /* Gris claro */ 
+  border: 2px solid red;
+  /* Gris claro */
   background-color: red;
 }
-.resultado{
+
+.resultado {
   font-size: 1.8vw;
 }
 
-.inputs{
+.inputs {
   display: flex;
   width: 90%;
   flex-direction: row;
