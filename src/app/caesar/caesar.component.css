@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@800&family=Teko&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Overpass:wght@200&family=Source+Sans+3:wght@800&family=Teko&display=swap);
-
+@import url(https://fonts.googleapis.com/css2?family=Palanquin:wght@500&display=swap);
 .main-container {
   display: flex;
   flex-direction: column;
@@ -9,107 +9,98 @@
   height: 100%;
   padding-top: 10%;
   z-index: 1;
-  margin-bottom: 100px;
+  margin-bottom: 100px
 }
-
 .rows {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: auto;
   width: 100%;
-  margin: 2% 0;
+  margin: 2% 0
 }
-
 .controls {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-
+  justify-content: space-between
 }
-
 .row1 {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 2%;
+  margin-bottom: 2%
 }
-
 .row2 {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin-top: 2%;
+  margin-top: 2%
 }
-
 .letter {
   padding: 1.5%;
   border-radius: 10%;
-  background: lightgrey;
+  background: #d3d3d3;
   font-size: 1vw;
-  font-family: 'Roboto';
+  font-family: Roboto
 }
-
-.input-container{
+.input-container {
   width: 100%;
   height: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center
 }
-
 .input {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
   font-weight: 500;
   font-size: 1.3vw;
   color: #fff;
-  background-color: rgb(28, 28, 30);
-  box-shadow: 0 0 .4vw rgba(0, 0, 0, 0.5), 0 0 0 .15vw transparent;
+  background-color: #1c1c1e;
+  box-shadow: 0 0 .4vw rgba(0,0,0,.5),0 0 0 .15vw transparent;
   border-radius: 0.4vw;
   border: none;
-  outline: none;
-  padding: 0.4vw;
+  outline: 0;
+  padding: .4vw;
   max-width: 100%;
   width: 70%;
   height: 10vh;
-  transition: .4s;
+  transition: .4s
 }
-
 .input:hover {
-  box-shadow: 0 0 0 .15vw rgba(135, 207, 235, 0.186);
+  box-shadow: 0 0 0 .15vw rgba(135,207,235,.186)
 }
-
 .input:focus {
-  box-shadow: 0 0 0 .15vw skyblue;
+  box-shadow: 0 0 0 .15vw #87ceeb
 }
-
 p {
   flex: 1;
   text-align: center;
   font-size: 2vw;
-  color: white;
-  font-family: Teko, sans-serif;
-  margin: 0;
-  
+  color: #fff;
+  font-family: Teko,sans-serif;
+  margin: 0
 }
-
+.info p {
+  font-family: Palanquin,sans-serif;
+  font-size: 1.5vw
+}
 .button-name {
   align-items: center;
   appearance: none;
-  background-color: #FCFCFD;
+  background-color: #fcfcfd;
   border-radius: 4px;
   border-width: 0;
-  box-shadow: rgba(45, 35, 66, 0.2) 0 2px 4px, rgba(45, 35, 66, 0.15) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  box-shadow: rgba(45,35,66,.2) 0 2px 4px,rgba(45,35,66,.15) 0 7px 13px -3px,#d6d6e7 0 -3px 0 inset;
   box-sizing: border-box;
-  color: #36395A;
+  color: #36395a;
   cursor: pointer;
   display: inline-flex;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "JetBrains Mono",monospace;
   height: 48px;
   justify-content: center;
   line-height: 1;
@@ -120,42 +111,81 @@ p {
   position: relative;
   text-align: left;
   text-decoration: none;
-  transition: box-shadow .15s, transform .15s;
+  transition: box-shadow .15s,transform .15s;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
   white-space: nowrap;
-  will-change: box-shadow, transform;
-  font-size: 18px;
+  will-change: box-shadow,transform;
+  font-size: 18px
 }
-
 .button-name:focus {
-  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  box-shadow: #d6d6e7 0 0 0 1.5px inset,rgba(45,35,66,.4) 0 2px 4px,rgba(45,35,66,.3) 0 7px 13px -3px,#d6d6e7 0 -3px 0 inset
 }
-
 .button-name:hover {
-  box-shadow: rgba(45, 35, 66, 0.3) 0 4px 8px, rgba(45, 35, 66, 0.2) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
-  transform: translateY(-2px);
+  box-shadow: rgba(45,35,66,.3) 0 4px 8px,rgba(45,35,66,.2) 0 7px 13px -3px,#d6d6e7 0 -3px 0 inset;
+  transform: translateY(-2px)
 }
-
 .button-name:active {
-  box-shadow: #D6D6E7 0 3px 7px inset;
-  transform: translateY(2px);
+  box-shadow: #d6d6e7 0 3px 7px inset;
+  transform: translateY(2px)
 }
-
-.info{
+.info {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 80%;
   margin: 3% 0;
-  margin-bottom: 15%;
+  margin-bottom: 15%
 }
-
-.info h1{
-  font-family: 'Teko', sans-serif;
+.info h1 {
+  font-family: Teko,sans-serif;
   font-size: 3vw;
-  color: white;
-  margin-bottom: 2%;
+  color: #fff;
+  margin-bottom: 2%
+}
+@media screen and (max-width:675px) {
+  .main-container {
+    padding-top: 30%
+  }
+  .info {
+    width: 90%
+  }
+  .info h1 {
+    font-size: 9vw
+  }
+  .info p {
+    font-size: 6vw
+  }
+  .row1 {
+    display: none
+  }
+  .row2 {
+    display: none
+  }
+  .inputText {
+    width: 100%
+  }
+  .controls {
+    align-items: center;
+    margin: 5% 0
+  }
+  .controls p,
+  .input-container p {
+    font-size: 5vw
+  }
+  .button-name {
+    height: 5%
+  }
+  .input {
+    width: 100%;
+    height: 40%;
+    font-size: 4vw
+  }
+}
+@media screen and (max-width:675px) {
+  .main-container {
+    padding-top: 30%
+  }
 }

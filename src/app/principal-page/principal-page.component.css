@@ -1,13 +1,17 @@
 @import url(https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@800&family=Teko&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Overpass:wght@200&family=Source+Sans+3:wght@800&family=Teko&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Palanquin:wght@500&display=swap);
 .main {
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
   max-width: 100vw;
-  font-family: 'Red Hat Text',sans-serif;
   overflow-x: hidden
+}
+p {
+  padding: 0;
+  margin: 0
 }
 .principal {
   width: 100%;
@@ -41,12 +45,13 @@ h1 {
   border-right: 3px solid;
   line-height: .7em;
   font-family: monospace;
-  font-size: 2em;
-  color: #343a40
+  font-size: 2em
 }
 .info {
   display: flex;
   flex-direction: column;
+  font-family: Palanquin,sans-serif;
+  font-size: 1vw;
   align-items: stretch;
   justify-content: flex-start;
   margin-top: 15vh;
@@ -84,8 +89,8 @@ a {
   min-height: 100vh;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: space-around
 }
 .item {
   display: flex;
@@ -97,7 +102,6 @@ a {
   background-color: #212529;
   color: #dee2e6;
   flex-direction: column;
-  margin-top: 5%;
   border-radius: .5em;
   -webkit-box-shadow: 0 29px 38px -15px rgba(0,0,0,.43);
   -moz-box-shadow: 0 29px 38px -15px rgba(0,0,0,.43);
@@ -106,9 +110,10 @@ a {
   cursor: pointer
 }
 .item:hover {
-  background-color: #dee2e6;
-  color: #212529!important;
-  transform: scale(1.05)
+  border-color: #343a40;
+  transform: scale(1.05);
+  background-color: #adb5bd;
+  color: #212529
 }
 h3 {
   font-family: Teko,sans-serif;
@@ -125,15 +130,16 @@ h3 {
     width: 65vw
   }
   .info {
-    max-width: 80%
+    max-width: 80%;
+    min-width: 60%;
+    font-size: 3vw
   }
   .blank {
     min-height: 20vh
   }
   .second {
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-start
+    align-items: center
   }
   .item {
     min-width: 80vw;

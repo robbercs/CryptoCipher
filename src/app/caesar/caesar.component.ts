@@ -29,11 +29,11 @@ export class CaesarComponent {
       while (encryptedIndex < 0) {
         encryptedIndex += 26;
       }
-  
+
       return this.ALPHABET.charAt(encryptedIndex);
     });
   }
-  
+
   decrypt(text: string, shift: number) {
     return text.replace(/[A-Z]/g, (char) => {
       const currentIndex = this.ALPHABET.indexOf(char);
@@ -46,9 +46,9 @@ export class CaesarComponent {
   moveRow(direction: 'left' | 'right') {
     const offset = direction === 'left' ? -1 : 1;
     this.row2 = this.shiftArray(this.row2, offset);
-    this.shift+=offset;
+    this.shift += offset;
     console.log(this.shift);
-    this.outputText=this.encrypt(this.inputText,this.shift);
+    this.outputText = this.encrypt(this.inputText, this.shift);
   }
 
   private shiftArray(array: string[], offset: number): string[] {
@@ -66,7 +66,7 @@ export class CaesarComponent {
     }
     return newArray;
   }
-  
+
 
 }
 

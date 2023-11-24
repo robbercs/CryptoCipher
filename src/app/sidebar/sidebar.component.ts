@@ -15,7 +15,7 @@ export class SidebarComponent {
 
   public menuVisible = false;
 
-  toggleMenu(){
+  toggleMenu() {
     this.menuVisible = !this.menuVisible;
     console.log(this.menuVisible);
   }

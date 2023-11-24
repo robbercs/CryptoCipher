@@ -1,6 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@800&family=Teko&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Overpass:wght@200&family=Source+Sans+3:wght@800&family=Teko&display=swap);
-
 .main-container {
   display: flex;
   flex-direction: column;
@@ -9,13 +8,11 @@
   height: 100%;
   padding-top: 10%;
   z-index: 1;
-  margin-bottom: 100px;
+  margin-bottom: 100px
 }
-
 nav {
   width: 90%
 }
-
 .nav-pasos {
   padding: 1%;
   display: flex;
@@ -23,7 +20,6 @@ nav {
   justify-content: space-around;
   align-items: center
 }
-
 .nav-pasos a {
   text-decoration: none;
   background-color: #343a40;
@@ -33,15 +29,13 @@ nav {
   padding: 10px 20px;
   border-radius: 10px;
   border: 1px solid #f5f5f5;
-  font-family: Oswald, sans-serif;
+  font-family: Oswald,sans-serif;
   transition: all .3s ease-in-out
 }
-
 .nav-pasos a.active {
-  background-color: #998fc7;
-  border: 1px solid #998fc7
+  background-color: #7d7abc;
+  border: 1px solid #7d7abc
 }
-
 .pasos {
   width: 90%;
   background-color: #e8e8e8;
@@ -52,31 +46,28 @@ nav {
   border-radius: 10px;
   margin: 5% 0
 }
-
 .botones {
   width: 100%;
   margin-bottom: 3%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-around
 }
-
 button {
   padding: 10px 15px;
   border: unset;
   border-radius: 15px;
-  color: whitesmoke;
+  color: #f5f5f5;
   z-index: 1;
   background: #343a40;
   position: relative;
   font-weight: 1000;
-  font-size: 11px;
-  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, .27);
-  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, .27);
+  font-size: 1.2vw;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,.27);
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,.27);
   transition: all 250ms;
   overflow: hidden
 }
-
 button::before {
   content: "";
   position: absolute;
@@ -85,59 +76,50 @@ button::before {
   height: 100%;
   width: 0;
   border-radius: 15px;
-  background-color: #212121;
+  background-color: #7d7abc;
   z-index: -1;
-  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, .27);
-  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, .27);
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,.27);
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,.27);
   transition: all 250ms
 }
-
 button:hover {
   color: #e8e8e8
 }
-
 button:hover::before {
   width: 100%
 }
-
 table {
   width: 70%;
   border-collapse: collapse;
   border-radius: 10px;
   overflow: hidden;
   background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
+  box-shadow: 0 4px 8px rgba(0,0,0,.1);
   margin-bottom: 20px
 }
-
 td,
 th {
   padding: 15px;
   text-align: center
 }
-
 th {
-  background-color: #998fc7;
+  background-color: #7d7abc;
   color: #fff;
-  font-size: 1.2vw;
-  font-family: Oswald, sans-serif
+  font-size: 1.7vw;
+  font-family: Teko,sans-serif
 }
-
 td {
   background-color: #f9f9f9;
-  font-size: 1vw;
-  font-family: Oswald, sans-serif
+  font-size: 1.2vw;
+  font-family: Palanquin,sans-serif
 }
-
 td:last-child,
 th:last-child {
   border-right: none
 }
-
 td:last-child {
   border-bottom: none
 }
-
 .info {
   display: flex;
   flex-direction: column;
@@ -146,14 +128,12 @@ td:last-child {
   width: 90%;
   margin-bottom: 7%
 }
-
 .info h1 {
-  font-family: Teko, sans-serif;
-  font-size: 3vw;
+  font-family: Teko,sans-serif;
+  font-size: 4vw;
   color: grey;
   margin-bottom: 1%
 }
-
 .paso {
   display: flex;
   width: 100%;
@@ -162,86 +142,159 @@ td:last-child {
   align-items: center;
   margin: 7% 0
 }
-
 p {
   flex: 1;
   text-align: center;
-  font-size: 2vw;
+  font-size: 1.7vw;
   color: grey;
-  font-family: Teko, sans-serif;
-  margin: 0
+  font-family: Teko,sans-serif;
+  font-family: Palanquin,sans-serif;
+  margin: 0;
+  margin-bottom: 5%;
+  text-align: justify
 }
-
 .mitad {
   width: 50%
 }
-
 h2 {
-  font-family: Teko, sans-serif;
-  font-size: 2vw;
+  font-family: Teko,sans-serif;
+  font-size: 2.5vw;
   color: grey;
   margin-bottom: 1%
 }
-
 .primos {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-around
 }
-
 .fila {
   display: flex;
   justify-content: center;
-  width: 90%;
+  width: 90%
 }
-
 .numero-primo {
-  margin: 0.5%;
+  margin: .5%;
   padding: 1%;
   border: 1px solid #343a40;
   background-color: #343a40;
   border-radius: 5px;
-  color: white;
+  color: #fff;
   cursor: pointer;
-  font-family: 'Teko';
-  font-size: 1.7vw;
+  font-family: Teko;
+  font-size: 1.7vw
 }
-
 .numero-primo:hover {
-  background-color: #998fc7;
-  border: 1px solid #998fc7;
+  background-color: #7d7abc;
+  border: 1px solid #7d7abc
 }
-
-
 .inputType {
   width: 60%;
   padding: 8px;
   margin-bottom: 2%;
   border: 1px solid #ccc;
-  /* Gris claro */
   border-radius: 3px;
-  font-family: 'Teko', sans-serif;
+  font-family: Teko,sans-serif;
   font-size: 1.5vw;
-  /* Ajusta el tamaño según tus necesidades */
   background-color: #343a40;
-  color: #fff;
-  /* Blanco */
+  color: #fff
 }
-
 .inputType.invalid {
-  border: 2px solid red;
-  /* Gris claro */
-  background-color: red;
+  border: 2px solid #e71d36;
+  background-color: #e71d36
 }
-
 .resultado {
-  font-size: 1.8vw;
+  font-size: 1.8vw
 }
-
 .inputs {
   display: flex;
   width: 90%;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
+  gap: 10%
+}
+.inputs p {
+  font-family: Teko,sans-serif;
+  font-size: 2vw;
+  font-weight: 200%;
+  text-align: center
+}
+.inputsRes {
+  display: flex;
+  margin-top: 5%;
+  width: 90%;
+  font-size: 2.5vw;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center
+}
+.resultado {
+  color: #2d898b;
+  font-family: Teko,sans-serif;
+  font-size: 3vw;
+  text-align: center
+}
+@media screen and (max-width:675px) {
+  .main-container {
+    padding-top: 30%
+  }
+  nav {
+    height: 80vh
+  }
+  .nav-pasos {
+    flex-direction: column
+  }
+  .info {
+    width: 80%
+  }
+  .info h1 {
+    font-size: 7.5vw
+  }
+  .info p {
+    margin-top: 2%;
+    font-size: 3.5vw
+  }
+  h2 {
+    font-size: 6vw
+  }
+  table {
+    width: 90%
+  }
+  th {
+    font-size: 5vw
+  }
+  td {
+    font-size: 3.5vw
+  }
+  button {
+    font-size: 3vw
+  }
+  .numero-primo {
+    font-size: 4vw;
+    padding: 2%
+  }
+  .botones {
+    width: 80%;
+    gap: 5%
+  }
+  .botones button {
+    width: 80%
+  }
+  .label {
+    font-size: 4vw
+  }
+  .inputType {
+    width: 80%;
+    font-size: 4.5vw
+  }
+  .mensaje-error {
+    font-size: 3.5vw
+  }
+  .resultado {
+    font-size: 5vw
+  }
+  .inputs p {
+    font-size: 3.5vw
+  }
 }

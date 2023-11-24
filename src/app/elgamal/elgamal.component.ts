@@ -6,7 +6,7 @@ import { Component, ElementRef } from '@angular/core';
   styleUrls: ['./elgamal.component.css']
 })
 export class ElgamalComponent {
-  pasoActual = 1;
+  pasoActual = 6;
   p: number = 0;
   g: number = 0;
   a: number = 0;
@@ -22,6 +22,7 @@ export class ElgamalComponent {
   mensajeValidado: boolean = true;
   filas: number[][] = [];
   filasNumeros: { numero: number; orden: number }[][] = [];
+
   elementosDeMayorOrden: { numero: number; orden: number }[] = [];
   primos = [
     97, 101, 103, 107, 109, 113, 127, 131, 137, 139,
@@ -50,15 +51,12 @@ export class ElgamalComponent {
     'Desencriptación'
   ];
   ngOnInit(): void {
-    this.dividirEnFilas(16);
+    // this.dividirEnFilas(16);
+    this.dividirEnFilas(this.getWindowWidth() >= 883 ? 16 : 9);
   }
 
   constructor(private el: ElementRef) { }
 
-  mostrarPaso(numeroPaso: number) {
-    // this.pasoActual = numeroPaso-1;
-    // this.avanzarAlSiguientePaso();
-  }
   scrollToTop() {
     this.el.nativeElement.ownerDocument.body.scrollTop = 0;
     this.el.nativeElement.ownerDocument.documentElement.scrollTop = 0;
@@ -93,7 +91,7 @@ export class ElgamalComponent {
   seleccionarPrimo(p: number) {
     this.p = p;
     this.calcularYOrdenarElementosDeMayorOrden();
-    this.dividirEnFilasNumeros(10);
+    this.dividirEnFilasNumeros(this.getWindowWidth() >= 883 ? 10 : 8);
     this.avanzarAlSiguientePaso();
   }
 
@@ -144,7 +142,7 @@ export class ElgamalComponent {
   actualizarA() {
     if (!isNaN(this.a) && this.a >= 1 && this.a <= this.p - 1) {
       this.A = this.calcularAPublica();
-      this.clavePrivadaValida = true; // Restablecer la validación
+      this.clavePrivadaValida = true;
     } else {
       this.clavePrivadaValida = false;
     }
@@ -152,7 +150,7 @@ export class ElgamalComponent {
 
   actualizarM() {
     if (!isNaN(this.m) && this.m >= 1 && this.m <= this.p - 1) {
-      this.mensajeValidado = true; // Restablecer la validación
+      this.mensajeValidado = true;
       const resultadoEncriptacion = this.encriptarMensaje(this.m, this.A, this.p, this.g);
       this.c1 = resultadoEncriptacion.c1;
       this.c2 = resultadoEncriptacion.c2;
@@ -163,7 +161,7 @@ export class ElgamalComponent {
   }
   actualizarK() {
     if (!isNaN(this.k) && this.k >= 1 && this.k <= this.p) {
-      this.aleatorioValidado = true; // Restablecer la validación
+      this.aleatorioValidado = true;
       const resultadoEncriptacion = this.encriptarMensaje(this.m, this.A, this.p, this.g);
       this.c1 = resultadoEncriptacion.c1;
       this.c2 = resultadoEncriptacion.c2;
@@ -195,24 +193,22 @@ export class ElgamalComponent {
   }
 
   encriptarMensaje(mensaje: number, clavePublicaDestino: number, p: number, g: number): { c1: number, c2: number } {
-    const claveEfimeraPrivada = Math.floor(Math.random() * (p - 1)) + 1; // Genera una clave efímera aleatoria entre 1 y p-1
-    const c1 = this.powerModulo(g, claveEfimeraPrivada, p); // Calcula c1 usando exponenciación rápida
-    const s = this.powerModulo(clavePublicaDestino, claveEfimeraPrivada, p); // Calcula s usando exponenciación rápida
-    const c2 = (mensaje * s) % p; // Calcula c2
+    const claveEfimeraPrivada = Math.floor(Math.random() * (p - 1)) + 1;
+    const c1 = this.powerModulo(g, claveEfimeraPrivada, p);
+    const s = this.powerModulo(clavePublicaDestino, claveEfimeraPrivada, p);
+    const c2 = (mensaje * s) % p;
 
     return { c1, c2 };
   }
 
-  // Función para desencriptar un mensaje Elgamal
   desencriptarMensaje(c1: number, c2: number, clavePrivada: number, p: number): number {
-    const s = this.powerModulo(c1, clavePrivada, p); // Calcula s usando exponenciación rápida
-    const sInverso = this.encontrarInversoModulo(s, p); // Calcula el inverso multiplicativo de s
-    const mensaje = (c2 * sInverso) % p; // Calcula el mensaje
+    const s = this.powerModulo(c1, clavePrivada, p);
+    const sInverso = this.encontrarInversoModulo(s, p);
+    const mensaje = (c2 * sInverso) % p;
 
     return mensaje;
   }
 
-  // Función para encontrar el inverso multiplicativo de a modulo m usando el algoritmo extendido de Euclides
   encontrarInversoModulo(a: number, m: number): number {
     let m0 = m;
     let y = 0;
@@ -239,6 +235,10 @@ export class ElgamalComponent {
     }
 
     return x;
+  }
+
+  getWindowWidth() {
+    return window.innerWidth;
   }
 
 }

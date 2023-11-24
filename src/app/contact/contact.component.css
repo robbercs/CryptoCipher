@@ -1,0 +1,87 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-top: 10%;
+  z-index: -1;
+  margin-bottom: 100px
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Helvetica
+}
+body {
+  background-color: #000;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+form {
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 60px;
+  margin: 12px auto;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  position: relative;
+  z-index: 1;
+  margin-top: 5%
+}
+form > div {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  padding: 0 20px;
+  transform: translate(-50%,-50%);
+  background-color: #ddd;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  text-align: center
+}
+form > div > img {
+  background-color: #ddd;
+  width: 100px
+}
+form > input,
+form > textarea {
+  padding: 12px;
+  margin: 12px auto;
+  border: 1px solid #ccc;
+  color: #ddd;
+  background-color: #222;
+  border-radius: 4px;
+  display: block;
+  width: 70vw
+}
+form > textarea {
+  height: 100px;
+  resize: none
+}
+form > input[type=submit] {
+  max-width: 20vw;
+  padding-left: 1%;
+  padding-right: 1%;
+  cursor: pointer;
+  transition: .35s
+}
+form > input[type=submit]:hover {
+  background-color: #555
+}
+form > input.campo-invalido,
+form > textarea.campo-invalido {
+  border: 2px solid #e71d36
+}
+@media screen and (max-width:675px) {
+  .main-container {
+    padding-top: 50%
+  }
+  form input,
+  form textarea {
+    font-size: 3.5vw
+  }
+}

@@ -3,26 +3,33 @@
 <div class="main-container">
 
   <nav class="nav-pasos">
-    <a (click)="mostrarPaso(1)" [class.active]="pasoActual === 1">Información</a>
-    <a (click)="mostrarPaso(2)" [class.active]="pasoActual === 2">Elección de p</a>
-    <a (click)="mostrarPaso(3)" [class.active]="pasoActual === 3">Elección de g</a>
-    <a (click)="mostrarPaso(4)" [class.active]="pasoActual === 4">Creación de clave</a>
-    <a (click)="mostrarPaso(5)" [class.active]="pasoActual === 5">Encriptación</a>
-    <a (click)="mostrarPaso(6)" [class.active]="pasoActual === 6">Desencriptación</a>
+    <a [class.active]="pasoActual === 1">Información</a>
+    <a [class.active]="pasoActual === 2">Elección de p</a>
+    <a [class.active]="pasoActual === 3">Elección de g</a>
+    <a [class.active]="pasoActual === 4">Creación de clave</a>
+    <a [class.active]="pasoActual === 5">Encriptación</a>
+    <a [class.active]="pasoActual === 6">Desencriptación</a>
   </nav>
 
   <div class="pasos">
     <div class="paso" *ngIf="pasoActual === 1">
       <div class="info">
         <h1>Criptosistema Elgamal</h1>
-        <p>El algoritmo de encriptación de clave pública Elgamal se basa en el problema del logaritmo discreto y está
-          estrechamente relacionado con su precursor, el intercambio de claves Diffie-Hellman. Este sistema tiene
-          varias versiones que dependen del grupo en el que se desarrolle. Aunque se explicará la versión basada en
-          Fp, existe otra variante que se basa en grupos de curvas elípticas sobre cuerpos finitos.</p>
+        <p>El criptosistema ElGamal es un sistema de cifrado de clave pública que lleva el nombre de su creador, Taher
+          ElGamal. Fue propuesto por ElGamal en 1985 y se considera una alternativa segura al algoritmo de cifrado de
+          clave pública RSA. Este criptosistema se basa en la dificultad de resolver el problema del logaritmo discreto
+          en un grupo finito, que es una tarea computacionalmente difícil.</p>
+        <p>En el criptosistema ElGamal, cada usuario tiene un par de claves: una clave privada y una clave pública. La
+          clave privada se mantiene en secreto, mientras que la clave pública se comparte abiertamente. El proceso de
+          cifrado utiliza la clave pública del destinatario, y solo el destinatario que posee la clave privada
+          correspondiente puede descifrar el mensaje cifrado.</p>
+        <p>El proceso de generación de claves en ElGamal implica la selección de un grupo cíclico de números primos
+          finitos y la elección de un generador para ese grupo. El cifrado se realiza mediante la elección de un número
+          aleatorio para generar una clave de sesión, y luego se utilizan operaciones en el grupo cíclico para producir
+          el texto cifrado. La seguridad del criptosistema se basa en la dificultad de resolver el problema del
+          logaritmo discreto, que consiste en encontrar el exponente desconocido dado un número base y el resultado de
+          la exponenciación modular.</p>
 
-        <p>El algoritmo de Elgamal se basa en el problema del logaritmo discreto, que consiste en encontrar el exponente
-          x de una potencia g^x en un grupo G. Este problema es difícil de resolver en algunos grupos, como los grupos
-          de curvas elípticas o los grupos de puntos de curvas elípticas sobre cuerpos finitos.</p>
       </div>
       <h2>Ejemplo Práctico: Alice, Bob y Eve</h2>
 
@@ -113,14 +120,12 @@
       <div class="info">
         <h1>Creación de clave privada</h1>
         <p>Alice escoge su clave privada 0 < a < p-1 y calcula su clave pública con ella A=g^a (mod p) </p>
-            <p>Introduce el número a:</p>
+            <p class="label">Introduce el número a:</p>
       </div>
       <input type="number" class="inputType" id="clavePrivada" [class.invalid]="!clavePrivadaValida" [(ngModel)]="a"
         min="1" [max]="p - 1" (ngModelChange)="actualizarA()" />
       <p *ngIf="!clavePrivadaValida" class="mensaje-error">Ingrese una clave privada válida entre 1 y {{ p - 1 }}</p>
-      <p *ngIf="clavePrivadaValida" class="resultado">El valor de la clave pública A = g^a (mod p) es:</p>
-      <p *ngIf="clavePrivadaValida" class="resultado">{{A}}</p>
-
+      <p *ngIf="clavePrivadaValida" class="resultado">El valor de la clave pública A = g^a (mod p) es: {{A}}</p>
     </div>
     <div class="paso" *ngIf="pasoActual === 5">
       <div class="info">
@@ -130,7 +135,7 @@
       </div>
 
       <div class="inputs">
-        <p>Introduce el mensaje</p>
+        <p> Introduce el mensaje</p>
         <p>Introduce el elemento aleatorio</p>
       </div>
       <div class="inputs">
@@ -144,9 +149,9 @@
         <p *ngIf="!aleatorioValidado" class="mensaje-error">Ingrese un aletorio válido entre 1 y {{ p - 1 }}</p>
       </div>
 
-      <div class="inputs" *ngIf="mensajeValidado && aleatorioValidado">
-        <p style="font-size: 2vw;"> C1 : {{c1}}</p>
-        <p style="font-size: 2vw;"> C2 : {{c2}}</p>
+      <div class="inputsRes" *ngIf="mensajeValidado && aleatorioValidado">
+        <p class="resultado"> C1 : {{c1}}</p>
+        <p class="resultado"> C2 : {{c2}}</p>
       </div>
 
 
@@ -159,8 +164,8 @@
           aje m = c2^a mod p</p>
         <p>p: {{p}} , g: {{g}} , a: {{a}} , A: {{A}} , k: {{k}} , m: {{m}} , (c1,c2): ({{c1}},{{c2}}) </p>
       </div>
-      <p>La desencriptación del mensaje se da por la fórmula: (c1^a)^-1 * c2 mod p = m</p>
-      <p>m = (c1^a)^-1 * c2 mod p = {{d}}</p>
+      <p class="resultado">La desencriptación del mensaje se da por la fórmula: (c1^a)^-1 * c2 mod p = m</p>
+      <p class="resultado">m = (c1^a)^-1 * c2 mod p = {{d}}</p>
     </div>
     <div class="botones">
       <button *ngIf="pasoActual > 1" (click)="retrocederAlPasoAnterior()">Retroceder a {{ nombresPasos[pasoActual - 2]

@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent {
+  ultimaActualizacion(): string {
+    const fecha = new Date();
+    return fecha.toDateString();
+  }
 
 }

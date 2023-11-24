@@ -16,6 +16,7 @@ import { PohligComponent } from './pohlig/pohlig.component';
 import { MillerComponent } from './miller/miller.component';
 import { FormsModule } from '@angular/forms'; 
 import { ReactiveFormsModule } from '@angular/forms';
+import { ContactComponent } from './contact/contact.component';
 
 const appRoute: Routes = [
   {path: '', component: PrincipalPageComponent },
@@ -25,7 +26,9 @@ const appRoute: Routes = [
   {path: 'babyGiant', component: BabyGiantComponent },
   {path: 'pohlig', component: PohligComponent },
   {path: 'miller', component: MillerComponent },
-  {path: 'rsa', component: RsaComponent }
+  {path: 'rsa', component: RsaComponent },
+  {path: 'contact', component: ContactComponent },
+
 ]
 
 @NgModule({
@@ -41,7 +44,8 @@ const appRoute: Routes = [
     ElgamalComponent,
     BabyGiantComponent,
     PohligComponent,
-    MillerComponent
+    MillerComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
