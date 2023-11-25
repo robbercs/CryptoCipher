@@ -127,12 +127,14 @@ h2 {
   .rectangle {
     flex-direction: column;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    padding: 10%;
   }
   .rectangle-column {
     flex-direction: column;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    margin-bottom: 10%;
   }
   h1 {
     display: flex;

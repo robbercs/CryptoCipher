@@ -6,7 +6,7 @@ import { Component, ElementRef } from '@angular/core';
   styleUrls: ['./elgamal.component.css']
 })
 export class ElgamalComponent {
-  pasoActual = 6;
+  pasoActual = 1;
   p: number = 0;
   g: number = 0;
   a: number = 0;
