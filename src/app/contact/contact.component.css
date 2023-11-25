@@ -56,7 +56,8 @@ form > textarea {
   background-color: #222;
   border-radius: 4px;
   display: block;
-  width: 70vw
+  width: 70vw;
+  font-size: 1.2vw;
 }
 form > textarea {
   height: 100px;

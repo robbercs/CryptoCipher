@@ -3,92 +3,93 @@
 <div class="main-container">
 
   <nav class="nav-pasos">
-    <a [class.active]="pasoActual === 1">Información</a>
-    <a [class.active]="pasoActual === 2">Elección de p</a>
-    <a [class.active]="pasoActual === 3">Elección de g</a>
-    <a [class.active]="pasoActual === 4">Creación de clave</a>
-    <a [class.active]="pasoActual === 5">Encriptación</a>
-    <a [class.active]="pasoActual === 6">Desencriptación</a>
+    <a [class.active]="pasoActual === 1">Information</a>
+    <a [class.active]="pasoActual === 2">Choice of p</a>
+    <a [class.active]="pasoActual === 3">Choice of g</a>
+    <a [class.active]="pasoActual === 4">Key Creation</a>
+    <a [class.active]="pasoActual === 5">Encryption</a>
+    <a [class.active]="pasoActual === 6">Decryption</a>
+
   </nav>
 
   <div class="pasos">
     <div class="paso" *ngIf="pasoActual === 1">
       <div class="info">
-        <h1>Criptosistema Elgamal</h1>
-        <p>El criptosistema ElGamal es un sistema de cifrado de clave pública que lleva el nombre de su creador, Taher
-          ElGamal. Fue propuesto por ElGamal en 1985 y se considera una alternativa segura al algoritmo de cifrado de
-          clave pública RSA. Este criptosistema se basa en la dificultad de resolver el problema del logaritmo discreto
-          en un grupo finito, que es una tarea computacionalmente difícil.</p>
-        <p>En el criptosistema ElGamal, cada usuario tiene un par de claves: una clave privada y una clave pública. La
-          clave privada se mantiene en secreto, mientras que la clave pública se comparte abiertamente. El proceso de
-          cifrado utiliza la clave pública del destinatario, y solo el destinatario que posee la clave privada
-          correspondiente puede descifrar el mensaje cifrado.</p>
-        <p>El proceso de generación de claves en ElGamal implica la selección de un grupo cíclico de números primos
-          finitos y la elección de un generador para ese grupo. El cifrado se realiza mediante la elección de un número
-          aleatorio para generar una clave de sesión, y luego se utilizan operaciones en el grupo cíclico para producir
-          el texto cifrado. La seguridad del criptosistema se basa en la dificultad de resolver el problema del
-          logaritmo discreto, que consiste en encontrar el exponente desconocido dado un número base y el resultado de
-          la exponenciación modular.</p>
-
+        <h1>ElGamal Cryptosystem</h1>
+        <p>The ElGamal cryptosystem is a public-key encryption system named after its creator, Taher ElGamal. It was
+          proposed by ElGamal in 1985 and is considered a secure alternative to the RSA public-key encryption algorithm.
+          This cryptosystem is based on the difficulty of solving the discrete logarithm problem in a finite group,
+          which is a computationally challenging task.</p>
+        <p>In the ElGamal cryptosystem, each user has a pair of keys: a private key and a public key. The private key is
+          kept secret, while the public key is openly shared. The encryption process uses the recipient's public key,
+          and only the recipient who possesses the corresponding private key can decrypt the encrypted message.</p>
+        <p>The key generation process in ElGamal involves selecting a cyclic group of finite prime numbers and choosing
+          a generator for that group. Encryption is performed by choosing a random number to generate a session key, and
+          then cyclic group operations are used to produce the encrypted text. The security of the cryptosystem is based
+          on the difficulty of solving the discrete logarithm problem, which involves finding the unknown exponent given
+          a base number and the result of modular exponentiation.</p>
       </div>
-      <h2>Ejemplo Práctico: Alice, Bob y Eve</h2>
+      <h2>Practical Example: Alice, Bob, and Eve</h2>
 
       <table>
         <tr>
-          <th colspan="2">Parámetros públicos de creación</th>
+          <th colspan="2">Publicly Shared Creation Parameters</th>
         </tr>
         <tr>
-          <td colspan="2">Alice y Bob escogen un primo grande p y un entero g mod p con un orden primo grande en Fp</td>
+          <td colspan="2">Alice and Bob choose a large prime p and an integer g mod p with a large prime order in Fp
+          </td>
         </tr>
+
         <tr style="border-bottom: 1px solid #ddd;">
           <th class="mitad">Alice</th>
           <th class="mitad">Bob</th>
         </tr>
         <tr>
-          <th colspan="2">Creación de las claves</th>
+          <th colspan="2">Key Generation</th>
         </tr>
         <tr>
-          <td>Alice escoge su clave privada 1 ≤ a ≤ p-1</td>
+          <td>Alice chooses her private key 1 ≤ a ≤ p-1</td>
           <td></td>
         </tr>
         <tr>
-          <td>Calcula A = g^a mod p</td>
+          <td>Calculates A = g^a mod p</td>
           <td></td>
         </tr>
         <tr>
-          <td>Comparte la clave pública A</td>
+          <td>Shares the public key A</td>
           <td></td>
         </tr>
         <tr>
-          <th colspan="2">Encriptación</th>
+          <th colspan="2">Encryption</th>
         </tr>
         <tr>
           <td></td>
-          <td>Escoge su texto en claro m</td>
+          <td>Chooses plaintext message m</td>
         </tr>
         <tr>
           <td></td>
-          <td>Escoge el elemento aleatorio k</td>
+          <td>Chooses random element k</td>
         </tr>
         <tr>
           <td></td>
-          <td>Usa la clave pública de Alice A para calcular y enviar c1 = g^k mod p y c2 = mA^k mod p</td>
+          <td>Uses Alice's public key A to calculate and send c1 = g^k mod p and c2 = mA^k mod p</td>
         </tr>
         <tr>
-          <th colspan="2">Desencriptación</th>
+          <th colspan="2">Decryption</th>
         </tr>
         <tr>
-          <td>Calcula (c1^a)^-1 * c2 mod p = m</td>
+          <td>Calculates (c1^a)^-1 * c2 mod p = m</td>
           <td></td>
         </tr>
       </table>
 
 
+
     </div>
     <div class="paso" *ngIf="pasoActual === 2">
       <div class="info">
-        <h1>Elección del primo p para el grupo</h1>
-        <p>Elige uno de los siguientes números primos</p>
+        <h1>Choosing the Prime p for the Group</h1>
+        <p>Choose one of the following prime numbers</p>
       </div>
       <div class="primos">
         <div *ngFor="let fila of filas" class="fila">
@@ -104,8 +105,8 @@
     </div>
     <div class="paso" *ngIf="pasoActual ===3">
       <div class="info">
-        <h1>Elección del elemento g en el grupo de F {{p}}</h1>
-        <p>Elige uno de los siguientes números en el grupo con orden más grande</p>
+        <h1>Choosing the Element g in the Group of F{{p}}</h1>
+        <p>Choose one of the following numbers in the group with a larger order</p>
       </div>
       <div class="primos">
         <div *ngFor="let filaN of filasNumeros" class="fila">
@@ -118,21 +119,23 @@
     </div>
     <div class="paso" *ngIf="pasoActual ===4">
       <div class="info">
-        <h1>Creación de clave privada</h1>
-        <p>Alice escoge su clave privada 0 < a < p-1 y calcula su clave pública con ella A=g^a (mod p) </p>
-            <p class="label">Introduce el número a:</p>
+        <h1>Private Key Generation</h1>
+        <p>Alice chooses her private key 0 < a < p-1 and calculates her public key with it: A=g^a (mod p)</p>
+            <p class="label">
+            <p>Enter the number a:</p>
       </div>
       <input type="number" class="inputType" id="clavePrivada" [class.invalid]="!clavePrivadaValida" [(ngModel)]="a"
         min="1" [max]="p - 1" (ngModelChange)="actualizarA()" />
-      <p *ngIf="!clavePrivadaValida" class="mensaje-error">Ingrese una clave privada válida entre 1 y {{ p - 1 }}</p>
-      <p *ngIf="clavePrivadaValida" class="resultado">El valor de la clave pública A = g^a (mod p) es: {{A}}</p>
+      <p *ngIf="!clavePrivadaValida" class="mensaje-error">Enter a valid private key between 1 and {{ p - 1 }}</p>
+      <p *ngIf="clavePrivadaValida" class="resultado">The value of the public key A = g^a (mod p) is: {{A}}</p>
     </div>
     <div class="paso" *ngIf="pasoActual === 5">
       <div class="info">
-        <h1>Elección del mensaje y encriptación</h1>
-        <p>Bob escoge su texto en claro m y un elemento aleatorio 0 < k < p</p>
-            <p>Bob usa la clave pública de Alice A para calcular y enviar c1 = g^k mod p y c2 = mA^k mod p</p>
+        <h1>Message Selection and Encryption</h1>
+        <p>Bob chooses his plaintext message m and a random element 0 < k < p</p>
+            <p>Bob uses Alice's public key A to calculate and send c1 = g^k mod p and c2 = mA^k mod p</p>
       </div>
+
 
       <div class="inputs">
         <p> Introduce el mensaje</p>
@@ -145,8 +148,8 @@
           min="1" [max]="p - 1" (ngModelChange)="actualizarK()" />
       </div>
       <div class="inputs">
-        <p *ngIf="!mensajeValidado" class="mensaje-error">Ingrese un mensaje válida entre 1 y {{ p - 1 }}</p>
-        <p *ngIf="!aleatorioValidado" class="mensaje-error">Ingrese un aletorio válido entre 1 y {{ p - 1 }}</p>
+        <p *ngIf="!mensajeValidado" class="mensaje-error">Enter a valid message between 1 and {{ p - 1 }}</p>
+        <p *ngIf="!aleatorioValidado" class="mensaje-error">Enter a valid random element between 1 and {{ p - 1 }}</p>
       </div>
 
       <div class="inputsRes" *ngIf="mensajeValidado && aleatorioValidado">
@@ -158,19 +161,19 @@
     </div>
     <div class="paso" *ngIf="pasoActual ===6">
       <div class="info">
-        <h1>Decodificación del mensaje</h1>
-        <p>Alice recibe c1 y c2 de Bob</p>
-        <p>Alice usa su clave privada a para calcular el mens
-          aje m = c2^a mod p</p>
+        <h1>Message Decoding</h1>
+        <p>Alice receives c1 and c2 from Bob</p>
+        <p>Alice uses her private key a to calculate the message m = c2^a mod p</p>
+
         <p>p: {{p}} , g: {{g}} , a: {{a}} , A: {{A}} , k: {{k}} , m: {{m}} , (c1,c2): ({{c1}},{{c2}}) </p>
       </div>
-      <p class="resultado">La desencriptación del mensaje se da por la fórmula: (c1^a)^-1 * c2 mod p = m</p>
+      <p class="resultado">So, the result of this operation would be:</p>
       <p class="resultado">m = (c1^a)^-1 * c2 mod p = {{d}}</p>
     </div>
     <div class="botones">
-      <button *ngIf="pasoActual > 1" (click)="retrocederAlPasoAnterior()">Retroceder a {{ nombresPasos[pasoActual - 2]
+      <button *ngIf="pasoActual > 1" (click)="retrocederAlPasoAnterior()">Go back to {{ nombresPasos[pasoActual - 2]
         }}</button>
-      <button *ngIf="pasoActual < 6" (click)="avanzarAlSiguientePaso()">Avanzar a {{ nombresPasos[pasoActual]
+      <button *ngIf="pasoActual < 6" (click)="avanzarAlSiguientePaso()">Go to {{ nombresPasos[pasoActual]
         }}</button>
     </div>
   </div>

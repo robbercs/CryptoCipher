@@ -43,12 +43,12 @@ export class ElgamalComponent {
   ];
 
   nombresPasos: string[] = [
-    'Introducción',
-    'Elegir p',
-    'Elegir g',
-    'Creación de clave pública',
-    'Encriptación',
-    'Desencriptación'
+    'Introduction',
+    'Choose p',
+    'Choose g',
+    'Public Key Generation',
+    'Encryption',
+    'Decryption'
   ];
   ngOnInit(): void {
     // this.dividirEnFilas(16);

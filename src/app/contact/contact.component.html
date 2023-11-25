@@ -4,14 +4,14 @@
         <div>
             <img src="assets\3393739.png" alt="icon">
         </div>
-        <input type="text" placeholder="Nombre y apellidos" required [(ngModel)]="nombreApellidos"
+        <input type="text" placeholder="Name and Surname" required [(ngModel)]="nombreApellidos"
             name="nombreApellidos" #nombreApellidosInput="ngModel"
             [ngClass]="{'campo-invalido': nombreApellidosInput.invalid && (nombreApellidosInput.dirty || nombreApellidosInput.touched)}">
         <input type="text" placeholder="Email" required [(ngModel)]="email" name="email" #emailInput="ngModel"
             [ngClass]="{'campo-invalido': emailInput.invalid && (emailInput.dirty || emailInput.touched)}">
-        <input type="text" placeholder="Asunto" required [(ngModel)]="asunto" name="asunto" #asuntoInput="ngModel"
+        <input type="text" placeholder="Subject" required [(ngModel)]="asunto" name="asunto" #asuntoInput="ngModel"
             [ngClass]="{'campo-invalido': asuntoInput.invalid && (asuntoInput.dirty || asuntoInput.touched)}">
-        <textarea placeholder="Mensaje" required [(ngModel)]="mensaje" name="mensaje" #mensajeInput="ngModel"
+        <textarea placeholder="Message" required [(ngModel)]="mensaje" name="mensaje" #mensajeInput="ngModel"
             [ngClass]="{'campo-invalido': mensajeInput.invalid && (mensajeInput.dirty || mensajeInput.touched)}"></textarea>
         <input type="submit" value="Send">
     </form>
