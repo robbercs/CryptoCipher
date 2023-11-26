@@ -8,6 +8,15 @@ body {
   margin: 0;
   padding: 0
 }
+li{
+  list-style: none;
+}
+ul{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+}
 nav {
   width: 100%;
   position: fixed;
@@ -210,5 +219,17 @@ a {
   .navigation a:after,
   .navigation a:before {
     transition: none
+  }
+
+  .navigation .current a,
+.navigation .li:hover a {
+  transform: none;
+}
+
+  ul{
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    padding: 0;
   }
 }
