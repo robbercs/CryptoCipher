@@ -31,10 +31,12 @@ export class ContactComponent {
 
   formularioValido(): boolean {
     if (!this.nombreApellidos || !this.email || !this.asunto || !this.mensaje) {
+      alert("Please fill out all the fields")
       return false;
     }
     const formatoEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!formatoEmail.test(this.email)) {
+      alert("Please introduce a valid email");
       return false;
     }
     return true;
