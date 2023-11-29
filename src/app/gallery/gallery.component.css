@@ -1,0 +1,128 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-top: 10%;
+  z-index: -1;
+  margin-bottom: 100px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 3% 0;
+  margin-bottom: 10%;
+}
+
+.info h1 {
+  font-family: Teko, sans-serif;
+  font-size: 3vw;
+  color: #fff;
+  margin-bottom: 2%;
+}
+
+.info p {
+  flex: 1;
+  text-align: center;
+  font-size: 2vw;
+  color: #fff;
+  font-family: Teko, sans-serif;
+  margin: 0;
+  font-family: Palanquin, sans-serif;
+  font-size: 1.5vw;
+}
+
+.gallery-image {
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery-image img {
+  height: 400px; /* Ajusta la altura según tu preferencia */
+  width: 300px; /* Ajusta el ancho según tu preferencia */
+  border-radius: 15px; /* Agrega bordes redondeados */
+  transform: scale(1.0);
+  transition: transform 0.4s ease;
+}
+
+.img-box {
+  box-sizing: content-box;
+  margin: 20px; /* Ajusta la separación entre las imágenes */
+  overflow: hidden;
+  display: inline-block;
+  color: white;
+  position: relative;
+  background-color: white;
+  border-radius: 15px; /* Agrega bordes redondeados */
+}
+
+.caption {
+  position: absolute;
+  font-family: 'Teko';
+  font-size: 2vw;
+  bottom: 5px;
+  left: 20px;
+  opacity: 0.0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.transparent-box {
+  height: 400px;
+  width: 300px;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: background-color 0.3s ease;
+}
+
+.img-box:hover img {
+  transform: scale(1.1);
+}
+
+.img-box:hover .transparent-box {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.img-box:hover .caption {
+  transform: translateY(-20px);
+  opacity: 1.0;
+}
+
+.img-box:hover {
+  cursor: pointer;
+}
+
+.caption > p:nth-child(2) {
+  font-size: 0.8em;
+}
+
+.opacity-low {
+  opacity: 0.7;
+}
+
+@media screen and (max-width:675px) {
+  .main-container {
+    padding-top: 30%
+  }
+  .info {
+    width: 90%
+  }
+  .info h1 {
+    font-size: 9vw
+  }
+  .info p {
+    font-size: 6vw;
+  }
+
+  .caption{
+    font-size: 6vw;
+  }
+}
